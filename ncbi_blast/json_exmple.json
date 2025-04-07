@@ -1,0 +1,38 @@
+[
+    {
+        "query": "YOUR_QUERY_SEQUENCE_OR_ACCESSION",
+        "query_id": "...",
+        "description": "...",
+        "alignments": [
+            {
+                "title": "...",
+                "hit_id": "...",
+                "hit_def": "...",
+                "hit_accession": "...",
+                "length": ...,
+                "hsps": [
+                    {
+                        "align_length": ...,
+                        "bits": ...,
+                        "expect": ...,
+                        "frame": [...],
+                        "gaps": ...,
+                        "identities": ...,
+                        "positives": ...,
+                        "query": "...",
+                        "query_end": ...,
+                        "query_start": ...,
+                        "sbjct": "...",
+                        "sbjct_end": ...,
+                        "sbjct_start": ...,
+                        "score": ...,
+                        "strand": [...]
+                    },
+                    // ... more HSPs for this alignment ...
+                ]
+            },
+            // ... more alignments ...
+        ]
+    },
+    // ... more query results if you submitted multiple queries (though this script handles one at a time) ...
+]
