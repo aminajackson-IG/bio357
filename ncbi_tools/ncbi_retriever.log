@@ -48,3 +48,31 @@
 2025-10-20 23:13:03,572 - INFO - ✅ Downloaded 5 FASTA files
 2025-10-20 23:13:03,574 - INFO - FASTA files saved to: /Users/aminajackson/Git-projects/bio357/ncbi_tools/downloads/batch_1_fasta.fasta
 2025-10-20 23:13:03,575 - INFO - Download completed successfully!
+2025-10-21 00:07:36,731 - INFO - Output directory: /Users/aminajackson/Git-projects/bio357/ncbi_tools/downloads
+2025-10-21 00:07:36,731 - INFO - NCBI Data Retriever initialized
+2025-10-21 00:07:36,731 - INFO - Working directory: /Users/aminajackson/Git-projects/bio357/ncbi_tools
+2025-10-21 00:07:36,731 - INFO - Output directory: /Users/aminajackson/Git-projects/bio357/ncbi_tools/downloads
+2025-10-21 00:07:36,731 - ERROR - Input file 'accession_list.txt' not found!
+2025-10-21 00:07:36,731 - ERROR - Current working directory: /Users/aminajackson/Git-projects/bio357/ncbi_tools
+2025-10-21 00:07:36,732 - ERROR - Troubleshooting tips:
+2025-10-21 00:07:36,732 - ERROR - 1. Make sure you're using the FULL PATH to your file
+2025-10-21 00:07:36,732 - ERROR - 2. Check if the file exists in the specified location
+2025-10-21 00:07:36,732 - ERROR - 3. Try using an absolute path like:
+2025-10-21 00:07:36,732 - ERROR -    - Mac/Linux: /Users/yourname/Documents/yourfile.txt
+2025-10-21 00:07:36,732 - ERROR -    - Windows: C:\Users\yourname\Documents\yourfile.txt
+2025-10-21 00:07:36,732 - ERROR - 4. Or place your file in the ncbi_tools folder and use just the filename
+2025-10-21 00:07:36,732 - ERROR - Error during data retrieval: Input file 'accession_list.txt' not found! See log for troubleshooting tips.
+2025-10-21 00:07:47,257 - INFO - Output directory: /Users/aminajackson/Git-projects/bio357/ncbi_tools/downloads
+2025-10-21 00:07:47,257 - INFO - NCBI Data Retriever initialized
+2025-10-21 00:07:47,257 - INFO - Working directory: /Users/aminajackson/Git-projects/bio357/ncbi_tools
+2025-10-21 00:07:47,257 - INFO - Output directory: /Users/aminajackson/Git-projects/bio357/ncbi_tools/downloads
+2025-10-21 00:07:47,257 - ERROR - Input file 'accession_list.txt' not found!
+2025-10-21 00:07:47,257 - ERROR - Current working directory: /Users/aminajackson/Git-projects/bio357/ncbi_tools
+2025-10-21 00:07:47,257 - ERROR - Troubleshooting tips:
+2025-10-21 00:07:47,257 - ERROR - 1. Make sure you're using the FULL PATH to your file
+2025-10-21 00:07:47,257 - ERROR - 2. Check if the file exists in the specified location
+2025-10-21 00:07:47,257 - ERROR - 3. Try using an absolute path like:
+2025-10-21 00:07:47,257 - ERROR -    - Mac/Linux: /Users/yourname/Documents/yourfile.txt
+2025-10-21 00:07:47,257 - ERROR -    - Windows: C:\Users\yourname\Documents\yourfile.txt
+2025-10-21 00:07:47,257 - ERROR - 4. Or place your file in the ncbi_tools folder and use just the filename
+2025-10-21 00:07:47,257 - ERROR - Error during data retrieval: Input file 'accession_list.txt' not found! See log for troubleshooting tips.
