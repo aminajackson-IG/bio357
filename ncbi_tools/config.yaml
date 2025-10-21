@@ -3,7 +3,7 @@
 
 # REQUIRED: Your email address (NCBI requires this for API access)
 # Replace 'your.email@university.edu' with your actual email address
-email: "your.email@university.edu
+email: "your.email@university.edu"
 
 # REQUIRED: Path to your input file containing accession IDs
 # This can be a .txt, .csv, .xlsx, or .docx file
