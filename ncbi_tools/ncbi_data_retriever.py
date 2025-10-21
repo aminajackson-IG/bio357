@@ -13,17 +13,55 @@ Version: 1.0
 
 import os
 import sys
-import yaml
 import time
-import requests
-from pathlib import Path
-from typing import List, Dict, Any
 import logging
 
-# File format support
-import pandas as pd
-from docx import Document
-import openpyxl
+# Try to import required modules with fallbacks
+try:
+    import yaml
+except ImportError:
+    print("Error: PyYAML is required. Install with: pip install PyYAML")
+    sys.exit(1)
+
+try:
+    import requests
+except ImportError:
+    print("Error: requests is required. Install with: pip install requests")
+    sys.exit(1)
+
+try:
+    from pathlib import Path
+except ImportError:
+    print("Error: pathlib is required (Python 3.4+). Please upgrade Python.")
+    sys.exit(1)
+
+# Optional typing support (Python 3.5+)
+try:
+    from typing import List, Dict, Any
+except ImportError:
+    # Fallback for older Python versions
+    List = list
+    Dict = dict
+    Any = object
+
+# File format support with error handling
+try:
+    import pandas as pd
+except ImportError:
+    print("Warning: pandas not available. CSV and Excel support disabled.")
+    pd = None
+
+try:
+    from docx import Document
+except ImportError:
+    print("Warning: python-docx not available. Word document support disabled.")
+    Document = None
+
+try:
+    import openpyxl
+except ImportError:
+    print("Warning: openpyxl not available. Excel support may be limited.")
+    openpyxl = None
 
 # Configure logging
 logging.basicConfig(
@@ -182,6 +220,9 @@ class NCBIDataRetriever:
     
     def _read_csv_file(self, file_path: Path) -> List[str]:
         """Read accession IDs from a CSV file."""
+        if pd is None:
+            raise ImportError("pandas is required for CSV file support. Install with: pip install pandas")
+        
         df = pd.read_csv(file_path)
         
         # Try to find a column with accession IDs
@@ -203,6 +244,9 @@ class NCBIDataRetriever:
     
     def _read_excel_file(self, file_path: Path) -> List[str]:
         """Read accession IDs from an Excel file."""
+        if pd is None:
+            raise ImportError("pandas is required for Excel file support. Install with: pip install pandas")
+        
         df = pd.read_excel(file_path)
         
         # Try to find a column with accession IDs
@@ -224,6 +268,9 @@ class NCBIDataRetriever:
     
     def _read_docx_file(self, file_path: Path) -> List[str]:
         """Read accession IDs from a Word document."""
+        if Document is None:
+            raise ImportError("python-docx is required for Word document support. Install with: pip install python-docx")
+        
         doc = Document(file_path)
         accession_ids = []
         

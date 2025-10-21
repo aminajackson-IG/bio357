@@ -33,23 +33,78 @@ def install_requirements():
         subprocess.run([sys.executable, "-m", "pip", "--version"], 
                       check=True, capture_output=True)
         
-        # Install requirements
+        # Install requirements with upgrade flag
         result = subprocess.run([
-            sys.executable, "-m", "pip", "install", "-r", "requirements.txt"
+            sys.executable, "-m", "pip", "install", "--upgrade", "-r", "requirements.txt"
         ], capture_output=True, text=True)
         
         if result.returncode == 0:
             print("✅ All packages installed successfully!")
+            
+            # Verify critical packages
+            print("\n🔍 Verifying critical packages...")
+            critical_packages = ['requests', 'PyYAML', 'pandas', 'python-docx', 'openpyxl']
+            
+            for package in critical_packages:
+                try:
+                    if package == 'PyYAML':
+                        __import__('yaml')
+                    elif package == 'python-docx':
+                        __import__('docx')
+                    else:
+                        __import__(package)
+                    print(f"   ✅ {package}")
+                except ImportError:
+                    print(f"   ❌ {package} - installation may have failed")
+                    return False
+            
             return True
         else:
             print(f"❌ Error installing packages: {result.stderr}")
-            return False
+            print("\n🔧 Trying individual package installation...")
+            return install_packages_individually()
             
     except subprocess.CalledProcessError:
         print("❌ Error: pip is not available!")
         return False
     except Exception as e:
         print(f"❌ Unexpected error: {e}")
+        return False
+
+
+def install_packages_individually():
+    """Install packages one by one if batch installation fails."""
+    packages = [
+        'requests>=2.28.0',
+        'PyYAML>=6.0',
+        'pandas>=1.5.0',
+        'openpyxl>=3.0.0',
+        'python-docx>=0.8.11',
+        'lxml>=4.6.0',
+        'et-xmlfile>=1.1.0'
+    ]
+    
+    success_count = 0
+    for package in packages:
+        try:
+            print(f"   Installing {package}...")
+            result = subprocess.run([
+                sys.executable, "-m", "pip", "install", package
+            ], capture_output=True, text=True)
+            
+            if result.returncode == 0:
+                print(f"   ✅ {package}")
+                success_count += 1
+            else:
+                print(f"   ❌ {package}: {result.stderr}")
+        except Exception as e:
+            print(f"   ❌ {package}: {e}")
+    
+    if success_count >= 4:  # At least core packages
+        print(f"\n✅ {success_count}/{len(packages)} packages installed successfully")
+        return True
+    else:
+        print(f"\n❌ Only {success_count}/{len(packages)} packages installed")
         return False
 
 

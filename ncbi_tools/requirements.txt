@@ -10,9 +10,12 @@ pandas>=1.5.0             # For reading CSV and Excel files
 openpyxl>=3.0.0           # For reading Excel (.xlsx) files
 python-docx>=0.8.11       # For reading Word (.docx) files
 
-# Optional: For better performance and additional features
-urllib3>=1.26.0           # HTTP library (usually comes with requests)
-pathlib2>=2.3.0           # Enhanced path handling (Python 3.4+ compatibility)
+# Additional dependencies that might be missing
+lxml>=4.6.0               # Required by python-docx
+et-xmlfile>=1.1.0         # Required by openpyxl
+python-dateutil>=2.8.0    # Required by pandas
+pytz>=2021.1              # Required by pandas
+numpy>=1.21.0             # Required by pandas
 
 # Development and testing (optional)
 # pytest>=7.0.0           # For running tests

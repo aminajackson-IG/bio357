@@ -27,6 +27,11 @@ Or install manually:
 pip install -r requirements.txt
 ```
 
+Verify installation:
+```bash
+python check_dependencies.py
+```
+
 ### Step 3: Configure the Tool
 
 1. Open `config.yaml` in a text editor
@@ -69,8 +74,9 @@ Your downloaded files will be in the `downloads/` folder:
 
 ## 🔧 Common Issues
 
-**"No module named 'docx'"**
+**"No module named 'docx'" or "ImportError"**
 - Run: `pip install python-docx`
+- Or run: `python check_dependencies.py` to see all missing packages
 
 **"Configuration file not found"**
 - Make sure you're in the `bio357/ncbi_tools` folder

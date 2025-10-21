@@ -53,6 +53,11 @@ pip install -r requirements.txt
 python install.py
 ```
 
+**Verify Installation**: Check if all dependencies are installed correctly:
+```bash
+python check_dependencies.py
+```
+
 ### Step 3: Prepare Your Data
 
 Create a file with your accession IDs. You can use any of these formats:
@@ -219,6 +224,17 @@ bio357/
 #### "Module not found" errors
 - Make sure you've installed the requirements: `pip install -r requirements.txt`
 - Try running the installation script: `python install.py`
+- Check your installation: `python check_dependencies.py`
+- If specific modules are missing, install them individually:
+  ```bash
+  pip install requests PyYAML pandas openpyxl python-docx lxml
+  ```
+
+#### "ImportError" or "Exception module" errors
+- These are usually caused by missing dependencies
+- Run `python check_dependencies.py` to identify missing packages
+- Try installing packages individually if batch installation fails
+- Make sure you're using Python 3.7 or higher
 
 ### Getting Help
 
