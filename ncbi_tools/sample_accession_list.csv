@@ -1,0 +1,6 @@
+accession_id,gene_name,organism
+NM_001123456,GENE1,Homo sapiens
+NM_001234567,GENE2,Homo sapiens
+XM_001345678,GENE3,Homo sapiens
+NP_001456789,PROTEIN1,Homo sapiens
+XP_001567890,PROTEIN2,Homo sapiens

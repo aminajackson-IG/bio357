@@ -1,0 +1,39 @@
+# NCBI Data Retriever Configuration File
+# This file contains the settings needed to retrieve data from NCBI databases
+
+# REQUIRED: Your email address (NCBI requires this for API access)
+# Replace 'your.email@university.edu' with your actual email address
+email: "your.email@university.edu
+
+# REQUIRED: Path to your input file containing accession IDs
+# This can be a .txt, .csv, .xlsx, or .docx file
+# 
+# IMPORTANT: Use FULL PATH to your file, not just the filename!
+# Examples:
+#   - "/Users/student/Documents/accession_list.txt" (Mac/Linux)
+#   - "C:\Users\student\Documents\accession_list.txt" (Windows)
+#   - "accession_list.txt" (if file is in the same folder as this script)
+#   - "../data/accession_data.csv" (relative path from ncbi_tools folder)
+input_file_path: "accession_list.txt"
+
+# OPTIONAL: Path where downloaded files will be saved
+# If not specified, files will be saved in the ncbi_tools directory
+# 
+# IMPORTANT: Use FULL PATH for best results!
+# Examples:
+#   - "/Users/student/Documents/downloads/" (Mac/Linux)
+#   - "C:\Users\student\Documents\downloads\" (Windows)
+#   - "downloads/" (relative path - creates folder in ncbi_tools directory)
+#   - "../results/" (relative path - creates folder in bio357 directory)
+output_path: "downloads/"
+
+# OPTIONAL: Additional settings
+# Maximum number of records to retrieve per batch (NCBI API limit)
+batch_size: 200
+
+# Delay between API requests (in seconds) to be respectful to NCBI servers
+delay_between_requests: 0.5
+
+# File formats to download (set to true/false)
+download_genbank: true
+download_fasta: true

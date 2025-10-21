@@ -1,0 +1,50 @@
+2025-10-20 22:38:30,611 - INFO - Reading accession IDs from: sample_accession_list.txt
+2025-10-20 22:38:30,611 - INFO - Reading accession IDs from: sample_accession_list.csv
+2025-10-20 22:38:30,628 - WARNING - Skipping invalid accession ID: 
+2025-10-20 22:38:30,628 - INFO - Found 7 unique accession IDs
+2025-10-20 23:05:24,128 - INFO - Output directory: /Users/aminajackson/Git-projects/bio357/ncbi_tools/downloads
+2025-10-20 23:05:24,128 - INFO - NCBI Data Retriever initialized
+2025-10-20 23:05:24,128 - INFO - Working directory: /Users/aminajackson/Git-projects/bio357/ncbi_tools
+2025-10-20 23:05:24,128 - INFO - Output directory: /Users/aminajackson/Git-projects/bio357/ncbi_tools/downloads
+2025-10-20 23:05:24,128 - INFO - Reading accession IDs from: /Users/aminajackson/Git-projects/bio357/ncbi_tools/sample_accession_list.csv
+2025-10-20 23:05:24,128 - INFO - File size: 197 bytes
+2025-10-20 23:05:24,138 - INFO - Found 5 unique accession IDs
+2025-10-20 23:05:24,138 - INFO - Starting download for 5 accession IDs
+2025-10-20 23:05:24,138 - INFO - Downloading GenBank files...
+2025-10-20 23:05:24,138 - INFO - Processing batch 1/1
+2025-10-20 23:05:25,571 - INFO - Downloaded 1 sequences to /Users/aminajackson/Git-projects/bio357/ncbi_tools/downloads/batch_1_genbank.genbank
+2025-10-20 23:05:26,077 - INFO - Downloaded 5 GenBank files
+2025-10-20 23:05:26,078 - INFO - Downloading FASTA files...
+2025-10-20 23:05:26,078 - INFO - Processing batch 1/1
+2025-10-20 23:05:26,194 - ERROR - Error downloading batch 1: 429 Client Error: Too Many Requests for url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=183986678&rettype=fasta&retmode=text
+2025-10-20 23:05:26,194 - INFO - Downloaded 0 FASTA files
+2025-10-20 23:05:26,194 - INFO - Download completed successfully!
+2025-10-20 23:13:01,601 - INFO - Output directory: /Users/aminajackson/Git-projects/bio357/ncbi_tools/downloads
+2025-10-20 23:13:01,602 - INFO - NCBI Data Retriever initialized
+2025-10-20 23:13:01,602 - INFO - Working directory: /Users/aminajackson/Git-projects/bio357/ncbi_tools
+2025-10-20 23:13:01,602 - INFO - Output directory: /Users/aminajackson/Git-projects/bio357/ncbi_tools/downloads
+2025-10-20 23:13:01,602 - INFO - Reading accession IDs from: /Users/aminajackson/Git-projects/bio357/ncbi_tools/sample_accession_list.csv
+2025-10-20 23:13:01,602 - INFO - File size: 197 bytes
+2025-10-20 23:13:01,611 - INFO - Found 5 unique accession IDs
+2025-10-20 23:13:01,611 - INFO - Starting download for 5 accession IDs
+2025-10-20 23:13:01,611 - INFO - ==================================================
+2025-10-20 23:13:01,611 - INFO - DOWNLOADING GENBANK FILES
+2025-10-20 23:13:01,611 - INFO - ==================================================
+2025-10-20 23:13:01,611 - INFO - Processing batch 1/1 for genbank format
+2025-10-20 23:13:01,611 - INFO - Batch contains 5 accession IDs: ['NM_001123456', 'NM_001234567', 'XM_001345678']...
+2025-10-20 23:13:01,750 - INFO - Fetching genbank format using rettype=gb
+2025-10-20 23:13:01,951 - INFO - ✅ Downloaded 1 sequences to /Users/aminajackson/Git-projects/bio357/ncbi_tools/downloads/batch_1_genbank.genbank
+2025-10-20 23:13:01,952 - INFO -    File size: 10286 characters
+2025-10-20 23:13:02,458 - INFO - ✅ Downloaded 5 GenBank files
+2025-10-20 23:13:02,459 - INFO - GenBank files saved to: /Users/aminajackson/Git-projects/bio357/ncbi_tools/downloads/batch_1_genbank.genbank
+2025-10-20 23:13:02,459 - INFO - ==================================================
+2025-10-20 23:13:02,459 - INFO - DOWNLOADING FASTA FILES
+2025-10-20 23:13:02,460 - INFO - ==================================================
+2025-10-20 23:13:02,460 - INFO - Processing batch 1/1 for fasta format
+2025-10-20 23:13:02,460 - INFO - Batch contains 5 accession IDs: ['NM_001123456', 'NM_001234567', 'XM_001345678']...
+2025-10-20 23:13:02,695 - INFO - Fetching fasta format using rettype=fasta
+2025-10-20 23:13:03,067 - INFO - ✅ Downloaded 1 sequences to /Users/aminajackson/Git-projects/bio357/ncbi_tools/downloads/batch_1_fasta.fasta
+2025-10-20 23:13:03,068 - INFO -    File size: 2431 characters
+2025-10-20 23:13:03,572 - INFO - ✅ Downloaded 5 FASTA files
+2025-10-20 23:13:03,574 - INFO - FASTA files saved to: /Users/aminajackson/Git-projects/bio357/ncbi_tools/downloads/batch_1_fasta.fasta
+2025-10-20 23:13:03,575 - INFO - Download completed successfully!

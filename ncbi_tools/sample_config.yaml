@@ -1,0 +1,27 @@
+# Sample Configuration File for Testing
+# Copy this to config.yaml and modify as needed
+
+# REQUIRED: Your email address (NCBI requires this for API access)
+email: "test@example.com"
+
+# REQUIRED: Path to your input file containing accession IDs
+# IMPORTANT: Use FULL PATH to your file!
+# Examples:
+#   - "/Users/student/Documents/accession_list.txt" (Mac/Linux)
+#   - "C:\Users\student\Documents\accession_list.txt" (Windows)
+#   - "sample_accession_list.txt" (if file is in ncbi_tools folder)
+input_file_path: "sample_accession_list.txt"
+
+# OPTIONAL: Path where downloaded files will be saved
+# IMPORTANT: Use FULL PATH for best results!
+# Examples:
+#   - "/Users/student/Documents/downloads/" (Mac/Linux)
+#   - "C:\Users\student\Documents\downloads\" (Windows)
+#   - "test_downloads/" (relative path - creates folder in ncbi_tools directory)
+output_path: "test_downloads/"
+
+# OPTIONAL: Additional settings
+batch_size: 5
+delay_between_requests: 1.0
+download_genbank: true
+download_fasta: true

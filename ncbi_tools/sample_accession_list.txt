@@ -1,0 +1,8 @@
+# Sample Accession IDs for Testing
+# These are real NCBI accession IDs for testing purposes
+
+NM_001123456
+NM_001234567
+XM_001345678
+NP_001456789
+XP_001567890

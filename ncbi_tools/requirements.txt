@@ -1,0 +1,20 @@
+# NCBI Data Retriever Requirements
+# Install these packages using: pip install -r requirements.txt
+
+# Core dependencies
+requests>=2.28.0          # For making HTTP requests to NCBI API
+PyYAML>=6.0               # For reading YAML configuration files
+
+# File format support
+pandas>=1.5.0             # For reading CSV and Excel files
+openpyxl>=3.0.0           # For reading Excel (.xlsx) files
+python-docx>=0.8.11       # For reading Word (.docx) files
+
+# Optional: For better performance and additional features
+urllib3>=1.26.0           # HTTP library (usually comes with requests)
+pathlib2>=2.3.0           # Enhanced path handling (Python 3.4+ compatibility)
+
+# Development and testing (optional)
+# pytest>=7.0.0           # For running tests
+# black>=22.0.0            # For code formatting
+# flake8>=5.0.0            # For code linting
